@@ -1,0 +1,78 @@
+Realizando las actualizaciones del sistema
+
+Hit:1 http://mirrors.linode.com/ubuntu focal InRelease
+Hit:2 http://mirrors.linode.com/ubuntu focal-updates InRelease
+Hit:3 http://mirrors.linode.com/ubuntu focal-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu focal-security InRelease
+Reading package lists... Done
+Sistema al día
+
+Removiendo paquetes innecesarios
+
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 10 not upgraded.
+Paquetes eliminados con exito
+
+
+Limpiando memoria en cache.
+
+En este momento tienes 401 MiB en cache y 3355 MiB memoria libre
+
+Memoria liberada 362 MiB, ahora tienes 3717 MiB de memoria libre en RAM.
+
+Este es tu actual estado del disco:
+
+Filesystem      Size  Used Avail Use% Mounted on
+udev            1.9G     0  1.9G   0% /dev
+tmpfs           392M  980K  392M   1% /run
+/dev/sda         79G  2.4G   72G   4% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           2.0G     0  2.0G   0% /sys/fs/cgroup
+tmpfs           392M     0  392M   0% /run/user/0
+Estos son los actuales usuarios configurados para el sistema:
+
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+systemd-timesync
+messagebus
+syslog
+_apt
+tss
+uuidd
+tcpdump
+usbmux
+sshd
+landscape
+pollinate
+fwupd-refresh
+systemd-coredump
+devuser
+Favor ver el top 5 de procesos consumiendo CPU en el sistema
+
+    PID    PPID CMD                         %MEM %CPU
+   4342    3849 /bin/bash ./system_maintena  0.0  1.0
+   4359     412 /lib/systemd/systemd-udevd   0.0  0.3
+      1       0 /sbin/init                   0.2  0.0
+      2       0 [kthreadd]                   0.0  0.0
+      3       2 [rcu_gp]                     0.0  0.0

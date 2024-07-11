@@ -1,0 +1,4 @@
+root@localhost:~# cd /opt/
+root@localhost:/opt# ls -l
+total 4
+drwxr-xr-x 2 devuser developers 4096 Jul 11 06:59 devprojects
