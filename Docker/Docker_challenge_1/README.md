@@ -7,7 +7,7 @@ Repository used: https://github.com/falconcr/react-demo
 ## Create the necessary docker files for the creation of the container:
 
 ### Dockerfile
-
+```
 FROM node:17-alpine
 WORKDIR /app
 COPY package.json .
@@ -15,9 +15,9 @@ RUN npm install
 COPY . .
 EXPOSE 3000
 CMD ["npm", "start"]
-
+```
 ### docker-compose.yaml
-
+```
 version: "3.8"
 services:
   react-demo:
@@ -27,7 +27,7 @@ services:
       - '3000:3000'
     stdin_open: true
     tty: true
-
+```
 ## Make sure to pull the necessary container to run the applition on:
 
 > docker pull node:17-alpine
