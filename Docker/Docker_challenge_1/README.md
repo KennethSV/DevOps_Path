@@ -40,5 +40,5 @@ Once everything has been setup as described above, you can finally build up your
 
 ## POC
 
-![localhost:3000]()
-![Docker Container Running]()
+![localhost:3000](https://github.com/KennethSV/DevOps_Path/blob/main/Docker/Docker_challenge_1/Container_Running.jpg)
+![Docker Container Running](https://github.com/KennethSV/DevOps_Path/blob/main/Docker/Docker_challenge_1/Page_Loaded.jpg)
