@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ksv-nginx
+  name: ksv-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ksv-nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ksv-nginx
+    spec:
+      containers:
+      - image: nginx:1.19.10
+        name: nginx
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
