@@ -1,13 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations: {}
   creationTimestamp: null
   labels:
     app: nginx-deployment
   name: nginx-deployment
   namespace: cloudstation
 spec:
+  progressDeadlineSeconds: 600
   replicas: 3
+  revisionHistoryLimit: 10
   selector:
     matchLabels:
       app: nginx-deployment
@@ -20,8 +23,14 @@ spec:
     spec:
       containers:
       - image: nginx:1.26.2
+        imagePullPolicy: Always
         name: nginx
         ports:
         - containerPort: 80
         resources: {}
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
 status: {}
