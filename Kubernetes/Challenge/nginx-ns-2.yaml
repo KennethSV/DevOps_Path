@@ -4,21 +4,22 @@ metadata:
   annotations: {}
   creationTimestamp: null
   labels:
-    app: nginx-deployment
-  name: nginx-deployment
+    app: nginx-ns2
+  name: nginx-ns2
+  namespace: namespace-2
 spec:
   progressDeadlineSeconds: 600
   replicas: 3
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: nginx-deployment
+      app: nginx-ns2
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: nginx-deployment
+        app: nginx-ns2
     spec:
       containers:
       - image: nginx:1.26.2

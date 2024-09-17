@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-nodeport-svc
+  labels:
+    app: nginx-deployment
+spec:
+  ports:
+    - port: 80 # Port inside Cluster
+      protocol: TCP
+      targetPort: 80 # Port in the Nginx Containers
+      nodePort: 30080 # Node Port
+  selector:
+    app: nginx-deployment
+  type: NodePort

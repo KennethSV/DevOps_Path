@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-ns1-clusterip-svc
+  labels:
+    app: nginx-ns1
+  namespace: namespace-1
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: nginx-ns1
+  type: ClusterIP
