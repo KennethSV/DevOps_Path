@@ -1,0 +1,10 @@
+<VirtualHost *:{{ apache_port }}>
+    ServerName {{ site_title }}
+    DocumentRoot /var/www/html
+
+    <Directory /var/www/html>
+        AllowOverride None
+        Require all granted
+    </Directory>
+
+</VirtualHost>

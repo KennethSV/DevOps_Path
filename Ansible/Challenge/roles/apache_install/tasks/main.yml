@@ -1,0 +1,44 @@
+- name: Update apt package index
+  apt:
+    update_cache: yes
+
+- name: Install Apache
+  apt:
+    name: apache2
+    state: present
+
+- name: Ensure Apache is configured to listen on port 8080
+  lineinfile:
+    path: /etc/apache2/ports.conf
+    regexp: '^Listen '
+    line: 'Listen 8080'
+    state: present
+    backrefs: yes
+
+- name: Copy Apache configuration file
+  template:
+    src: apache_config.j2
+    dest: /etc/apache2/sites-available/{{ site_title }}.conf
+  notify: Restart Apache
+
+- name: Copy index file
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+
+- name: Enable the Apache site
+  command: a2ensite {{ site_title }}.conf
+  args:
+    removes: /etc/apache2/sites-enabled/{{ site_title }}.conf
+  notify: Restart Apache
+
+- name: Ensure Apache is enabled and started
+  service:
+    name: apache2
+    state: started
+    enabled: true
+
+- name: Allow Apache through the firewall
+  ufw:
+    rule: allow
+    name: 'Apache Full'

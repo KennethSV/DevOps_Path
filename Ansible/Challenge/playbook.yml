@@ -1,0 +1,5 @@
+- name: Install and Configure Apache on Ubuntu
+  hosts: webservers
+  become: yes
+  roles:
+    - apache_install

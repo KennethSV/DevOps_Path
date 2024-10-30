@@ -1,0 +1,16 @@
+- hosts: all
+  become: true
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Ensure Git is installed
+      ansible.builtin.package:
+        name: git
+        state: present
+    - name: Create .gitconfig for user
+      ansible.builtin.template:
+        src: templates/gitconfig.j2
+        dest: /home/{{ ansible_user }}/.gitconfig
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0644'
