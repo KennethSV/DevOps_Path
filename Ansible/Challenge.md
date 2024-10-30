@@ -34,7 +34,7 @@ Once the instances has been created the output will show you the actual private 
 
 #### Example on how it looks like:
 
-https://github.com/KennethSV/DevOps_Path/new/main/Ansible
+![AWS](https://github.com/KennethSV/DevOps_Path/blob/main/Ansible/Pages_Working/AWS.png)
 
 ## Ansible
 
@@ -50,5 +50,6 @@ On the Challenge folder, execute the following:
 
 Once the instances has been created, please make sure to access the the instances through the public_ip or public_host and port 8080. How it would like once you attempt the connection on browser:
 
-https://github.com/KennethSV/DevOps_Path/new/main/Ansible
-https://github.com/KennethSV/DevOps_Path/new/main/Ansible
+![Test1](https://github.com/KennethSV/DevOps_Path/blob/main/Ansible/Pages_Working/ec2-18-189-32-195.us-east-2.compute.amazonaws.com1.png)
+
+![Test2](https://github.com/KennethSV/DevOps_Path/blob/main/Ansible/Pages_Working/ec2-3-143-222-64.us-east-2.compute.amazonaws.com1.png)
